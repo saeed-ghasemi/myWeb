@@ -1,0 +1,24 @@
+<div class="container">
+  <form #listForm (Submit)="listSubmit(listForm.value); listForm.resetForm()">
+  <div class="form-group">
+    <label>this will capture the list you would enter</label>
+    <div class="input-group-prepend">
+      <!--#(hashtak) sign define a variable in the input-->
+      <input type="text" #list class="form-control" placeholder="Add list of names" name="list" ngModel>
+      <span class="input-group-text" (click)="addList (list.value)">
+        <i class="material-icons">add</i>
+      </span>
+      <!--calls the entered value from the above variable, to capture it we need to
+      define an array in the list.component.ts-->
+    </div>
+  </div>
+  <div class="data">
+    <ul class="list-instyled">
+      <!--and delete icon inside list item-->
+      <li *ngFor="let nameList of listArray">{{nameList}} <i (click)="deleteName(list.value)" class="material-icons">delete</i>
+      </li>
+    </ul>
+  </div>
+  </form>
+</div>
+
