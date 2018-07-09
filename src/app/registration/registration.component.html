@@ -1,0 +1,18 @@
+<h3>{{title2}}</h3>
+
+<p>
+  <input type="text" placeholder="First Name" />
+  <input type="text" placeholder="Last Name" />
+  <input type="email" placeholder="Email" />
+  <input type="password" placeholder="Password" />
+  <input type="password" placeholder="Confirm Passwrod" />
+  <br/>
+  <button>Register</button>
+</p>
+
+
+<div class="card card-block" *ngFor="let registration of jokes">
+  <p> {{jokes.firstJoke}} </p>
+  <p>{{jokes.secondJoke}}</p>
+
+</div>
