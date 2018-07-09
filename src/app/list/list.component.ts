@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-list',
@@ -6,16 +6,38 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  // listArray: Array<String>
+  // listArray: Array<String>   //two different ways how we define arrays in type script
+  listArray = []
 
-  listArray=[]
+  /*add item*/
+  addList(value){
+  if(value!==""){
+  this.listArray.push(value)
+}else{
+  alert('Field required **')
+}
 
-  addList(value) {
-    this.listArray.push(value)
-    console.log(this.listArray)
-
+}
+  /*delete item*/
+  deleteName(list) {
+    for (let i = 0; i <= this.listArray.length; i++) {
+      if (list == this.listArray[i]) {
+        this.listArray.splice(i, 1)
+      }
+    }
   }
-  constructor() { }
+
+  // submit Form
+  listSubmit(value: any) {
+    if (value !== "") {
+      this.listArray.push(value.todo)
+    } else {
+      alert('Field required **')
+    }
+  }
+
+  constructor() {
+  }
 
   ngOnInit() {
   }
