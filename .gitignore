@@ -4,9 +4,15 @@
 /dist
 /tmp
 /out-tsc
+*.xml
+*.iml
+
 
 # dependencies
 /node_modules
+*.xml
+*.iml
+
 
 # IDEs and editors
 /.idea
@@ -17,6 +23,7 @@
 .settings/
 *.sublime-workspace
 *.iml
+*.xml
 
 # IDE - VSCode
 .vscode/*
@@ -26,6 +33,7 @@
 !.vscode/extensions.json
 *.iml
 *.json
+*.xml
 
 # misc
 /.sass-cache
@@ -36,7 +44,11 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+*.xml
+*.iml
 
 # System Files
 .DS_Store
 Thumbs.db
+*.xml
+*.iml
