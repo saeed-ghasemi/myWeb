@@ -14,7 +14,7 @@
   </div>
   <div class="data">
     <ul class="list-instyled">
-      <!--and delete icon inside list item-->
+      <!--first adds the entered list and after that delete icon inside list item-->
       <li *ngFor="let nameList of listArray">{{nameList}} <i (click)="deleteName(list.value)" class="material-icons">delete</i>
       </li>
     </ul>
