@@ -1,13 +1,25 @@
 <nav class="navbar navbar-dark bg-primary">
   <!-- Navbar content -->
-  <a class="navbar-brand" href="#">Fixed top</a>
+  <ul>
+    <i>
+      <a class="marginR-T" routerLink="registration" title="Registration"> Registration</a>
+      <a class="marginR-T" routerLink="list" title="List"> List</a>
+      <a class="marginR-T" routerLink="joke" title="Joke"> Joke</a>
+
+
+    </i>
+  </ul>
+
 
 </nav>
-
-
 <h1>{{title}}</h1>
-<!--this is the instance of the component "registration"-->
+<router-outlet></router-outlet>
+
+
+
+<!--
+these are the instances of components "registration", "Joke" and "List";
 <app-registration></app-registration>
 <app-list></app-list>
-<app-joke></app-joke>
+<app-joke></app-joke>-->
 
